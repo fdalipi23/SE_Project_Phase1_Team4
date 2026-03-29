@@ -8,7 +8,7 @@ o	Ana Mari Llazari – [allazari23-gecko] – [allazari23@epoka.edu.al]
 
 o	Fiorela Dalipi – [fdalipi23]– [fdalipi23@epoka.edu.al]
 
-o	Enkela Zeneli] – [GitHub Username] – [ezeneli23@epoka.edu.al]
+o	Enkela Zeneli] – [Enkela04] – [ezeneli23@epoka.edu.al]
 
 o	Albana Tocilla – [atocilla23] – [atocilla23@epoka.edu.al]
 
