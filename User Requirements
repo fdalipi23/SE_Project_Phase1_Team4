@@ -1,0 +1,32 @@
+User Requirements and Application Specifications
+
+1.Chosen Development Model
+Development Model: Agile
+Justification
+Agile was chosen because our project is being developed step by step and the features may change during the process. 
+In our case, the main part of the project is the labour operation tracking system, while the pregnancy tracking part supports it with patient history and monitoring data.
+Since we are still improving features, interface design, and system structure, 
+Agile is more suitable than Waterfall because it allows fast updates, team collaboration, testing after each part, and easier adaptation when new requirements appear.
+
+2.User Requirements
+a. Stakeholders 
+1. Pregnant Woman / Mother:
+Creates an account and logs into the system
+Enters pregnancy details before labour
+Tracks pregnancy week, symptoms, weight, and notes
+Becomes the main patient whose data is used during labour monitoring
+
+2.Woman's family:
+Uses the women's user credentials to log in 
+Gets track of woman's life situation during labour in real time such as: mother's / baby's heart rate; blood pressure; body temperature; situation (critical or not);
+delivery (finished or not); cervical dilation 
+
+3.Hospital admin:
+Puts login information previously written by the hospital to be used continuously by the respective/responsible staff
+Update labour status in real time
+
+
+4.Developers:
+Build the frontend,backend and database 
+connects the pregnancy tracking part with the labour operation monitoring part
+Maintains the system and improves missing features
