@@ -58,8 +58,24 @@ Functional Requirements List
 21.The system shall display labour progress updates to family members.
 22.The system shall allow admin to manage pregnancy and labour records.
 
-b. Acceptance Criteria (Verification Requirements – 5 Specific Features)
+b. Acceptance Criteria:
+
 1. User Login
+User enters a registered email and correct password
+System verifies the credentials in the database.
+user is redirected to dashboard.
+invalid username or pass shown.
+
+2.Pregnancy tracking
+the woman can easily type the current tracking.
+The tracking is saved and shown in dashboard.
+The pregnant woman gets a notification on the downloads that the pdf is being downloaded.
+
+3.Operation room
+All patients should be showned for the admin to select between them.
+It should be easy for the admin to put the neccessary information for the patient
+The family view should show all the information that the admin has given
+
 
 
 
