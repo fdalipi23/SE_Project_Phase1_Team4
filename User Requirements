@@ -30,3 +30,38 @@ Update labour status in real time
 Build the frontend,backend and database 
 connects the pregnancy tracking part with the labour operation monitoring part
 Maintains the system and improves missing features
+3. Functional Requirements
+a. Description
+The system must specifically support pregnancy data management before delivery and labour operation monitoring during delivery.
+
+Functional Requirements List
+1.The system shall allow pregnant women to create an account.
+2.The system shall allow registered users to log in using email and password.
+3.The system shall display an error message when login credentials are invalid.
+4.The system shall create a pregnancy profile for each registered mother.
+5.The system shall allow the mother to enter personal pregnancy information.
+6.The system shall store the due date of the pregnancy.
+7.The system shall calculate the current pregnancy week automatically.
+8.The system shall calculate the trimester automatically.
+9.The system shall allow the mother to enter weekly weight records.
+10.The system shall allow the mother to enter symptoms for each week.
+11.The system shall allow the mother to enter pregnancy notes.
+12.The system shall allow the user to edit pregnancy tracking entries.
+13.The system shall allow the user to delete pregnancy tracking entries when necessary.
+14.The system shall allow doctors to view the mother’s pregnancy history before labour.
+15.The system shall create a labour monitoring record for a patient.
+16.The system shall allow doctors to update the current labour or operation stage.
+17.The system shall allow nurses to add labour progress notes.
+18.The system shall record the condition of the mother during labour.
+19.The system shall record the condition of the baby during labour.
+20.The system shall attach a timestamp to each labour update.
+21.The system shall display labour progress updates to family members.
+22.The system shall allow admin to manage pregnancy and labour records.
+
+b. Acceptance Criteria (Verification Requirements – 5 Specific Features)
+1. User Login
+
+
+
+
+
