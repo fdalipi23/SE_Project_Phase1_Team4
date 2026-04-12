@@ -30,9 +30,30 @@ Update labour status in real time
 Build the frontend,backend and database 
 connects the pregnancy tracking part with the labour operation monitoring part
 Maintains the system and improves missing features
+
 3. Functional Requirements
 a. Description
 The system must specifically support pregnancy data management before delivery and labour operation monitoring during delivery.
+
+User requirements:
+1.Pregnant users need to track their pregnancy progress week by week.
+2.Pregnant users need to calculate their pregnancy stage based on due date.
+3.Users need to schedule and manage doctor appointments.
+4.Users need to receive reminders for appointments and important pregnancy events.
+5.Users need to record symptoms and health changes during pregnancy.
+6.Users need to track their weight throughout pregnancy.
+7.Users need access to pregnancy-related health and nutrition information.
+8.Users need to store and access medical reports securely.
+9.Users need emergency contact access in urgent situations.
+10.Doctors need to view patient pregnancy data to monitor health progress.
+
+b. User Stories 
+As a pregnant woman, I want to register and log in securely so that I can access my personal pregnancy profile and labour-related information.
+As a pregnant woman, I want to enter my due date, symptoms, and weekly pregnancy data so that doctors can review my condition before labour starts.
+As a doctor, I want to update the labour operation stage and the condition of the mother and baby so that the system shows the latest status during delivery.
+As a family member, I want to view real-time labour progress updates so that I know what is happening during the operation without needing constant direct communication from hospital staff.
+As an admin, I want to manage users and monitoring records so that the system remains organized, secure, and reliable.
+
 
 Functional Requirements List
 1.The system shall allow pregnant women to create an account.
@@ -61,21 +82,192 @@ Functional Requirements List
 b. Acceptance Criteria:
 
 1. User Login
+Acceptance Criteria:
 User enters a registered email and correct password
-System verifies the credentials in the database.
-user is redirected to dashboard.
-invalid username or pass shown.
+System verifies the credentials in the database
+User is redirected to the dashboard after successful login
+Invalid email or password shows an error message on the same page
+Unauthorized users cannot access dashboard pages without logging in
 
-2.Pregnancy tracking
-the woman can easily type the current tracking.
-The tracking is saved and shown in dashboard.
-The pregnant woman gets a notification on the downloads that the pdf is being downloaded.
+2. Pregnancy Week and Trimester Calculation
+Acceptance Criteria:
+User enters a valid due date
+System calculates the current pregnancy week automatically
+System displays the correct trimester based on the calculated week
+The displayed pregnancy week updates correctly over time
 
-3.Operation room
-All patients should be showned for the admin to select between them.
-It should be easy for the admin to put the neccessary information for the patient
-The family view should show all the information that the admin has given
+3. Weekly Pregnancy Tracking Entry
+Acceptance Criteria:
+User can enter weight, symptoms, and notes
+System saves the entry successfully in the database
+The same week cannot be entered twice for the same patient
+Saved entry appears on the dashboard or tracking page
 
+4. Labour Operation Status Update
+Acceptance Criteria:
+Doctor or nurse selects the patient record
+Doctor or nurse enters the labour stage or operation update
+System stores the update with date and time
+Family view shows the newest status correctly
+Older updates remain visible as a history list
+
+5. Family Monitoring View
+Acceptance Criteria:
+Family member opens the labour monitoring page
+System shows current operation stage
+System shows baby status and mother status
+Updates appear in the correct order
+Page reflects the latest entered information
+
+
+Non-Functional Requirements
+a. Description
+These requirements describe how well our pregnancy and labour operation tracking system should work.
+
+Non-Functional Requirements List 
+1. The system should load the login page quickly.
+2. The dashboard should open without noticeable delay.
+3. Labour updates should appear quickly after being saved.
+4. The system should be available whenever users need it.
+5. The system should not crash during normal use.
+6. The system should store pregnancy and labour data reliably.
+7. The system should show clear error messages.
+8. The interface should be easy to understand for mothers and family members.
+9. The navigation should be simple and user-friendly.
+10. The design should use soft and calm visual elements suitable for the project theme.
+11. Forms should be easy to complete.
+12. The website should be responsive on laptop and mobile devices.
+13. The system should work correctly on common browsers.
+14. User sessions should remain active until logout or timeout.
+15. Passwords should not be stored as plain text.
+16. Only authenticated users should access private pages.
+17. Role-based access should limit what each type of user can view or edit.
+18. The database should maintain valid relations between users and records.
+19. The system should prevent duplicate or invalid tracking entries.
+20. Input fields should be validated before data is stored.
+21. The system should protect against SQL Injection.
+22. The system should protect against Cross-Site Scripting (XSS).
+23. The system should support future feature expansion.
+24. The code structure should be maintainable by the team.
+25. The system should keep labour monitoring updates organized in time order.
+26. The system should present information clearly during stressful situations such as labour.
+27. The system should provide a consistent user experience across all pages.
+
+b. Acceptance Criteria (4–5 Measurable Requirements)
+1. Speed
+Acceptance Criteria:
+
+Login page loads in less than 2 seconds
+
+Dashboard loads in less than 3 seconds
+
+Saving a pregnancy or labour update takes less than 2 seconds under normal use
+
+2. Usability
+Acceptance Criteria:
+A user can understand the main navigation without training
+Buttons, forms, and labels are clearly visible
+Error messages are understandable and shown in the correct place
+
+3. Security
+Acceptance Criteria:
+Passwords are hashed before storage
+Private pages require authentication
+Users cannot access restricted pages by typing the URL directl
+Role-based permissions are enforced correctly
+
+4. Compatibility
+Acceptance Criteria:
+The website displays correctly on desktop and mobile screens
+The main features work on Chrome, Edge, and other common browsers
+Form submission and dashboard pages work consistently across devices
+
+5. Reliability
+Acceptance Criteria:
+
+Saved records remain in the database after refresh or new login
+
+Invalid system actions return clear messages instead of crashing the page
+
+Labour and pregnancy history can be retrieved correctly when requested5. Application Specifications
+a. Architecture
+The project follows a three-tier architecture:
+
+Presentation Layer: HTML, CSS, JavaScript pages used by mothers, family members, doctors, nurses, and admin
+
+Business Logic Layer: PHP handles login, pregnancy tracking, labour monitoring, validation, and role-based access
+
+Data Layer: MySQL stores users, pregnancy records, labour monitoring updates, and related data
+
+b. Database Model
+Main Tables
+Users
+
+Pregnant_Women
+
+Pregnancy_Tracking
+
+Labour_Tracking
+
+Admin
+
+Relationships
+One User can have one Pregnant_Woman profile
+
+One Pregnant_Woman can have many Pregnancy_Tracking records
+
+One Pregnant_Woman can have many Labour_Tracking updates
+
+Admin manages records across the system
+
+c. Technologies Used
+HTML – structure of pages
+
+CSS – styling and responsive design
+
+JavaScript – interaction and dynamic page behavior
+
+PHP – backend logic and implementation
+
+MySQL – database implementation and storage
+
+d. User Interface Design Summary
+Step 1: Login Page
+The user sees email and password fields, a login button, and a link to register. If the credentials are wrong, an error message is shown on the same page.
+
+Step 2: Register Page
+New users enter their name, email, and password to create an account.
+
+Step 3: Dashboard
+After login, the mother sees her pregnancy dashboard with due date, current pregnancy week, trimester, and summary of previous entries.
+
+Step 4: Pregnancy Tracking Page
+The mother can add weekly weight, symptoms, and notes. Previous records are also visible.
+
+Step 5: Labour Monitoring Page
+During labour, doctors or nurses update the operation stage, mother status, baby status, and notes. Family members can view this progress in a simple and clear monitoring interface.
+
+Step 6: Admin View
+The admin sees user and record management sections to control the stored data.
+
+e. Security Measures
+Based on our current project structure, the system includes these security measures:
+
+Authentication with email and password during login
+
+Password hashing/encryption before database storage
+
+Session management to keep users logged in securely
+
+Role-based access control for admin, mother, doctor, and nurse views
+
+Input validation before saving data
+
+Prepared statements to reduce SQL Injection risk
+
+XSS protection using safe output methods such as htmlspecialchars()
+
+Secure logout to destroy session data
 
 
 
