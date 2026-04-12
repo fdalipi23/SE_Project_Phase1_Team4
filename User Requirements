@@ -156,11 +156,8 @@ Non-Functional Requirements List
 b. Acceptance Criteria (4–5 Measurable Requirements)
 1. Speed
 Acceptance Criteria:
-
 Login page loads in less than 2 seconds
-
 Dashboard loads in less than 3 seconds
-
 Saving a pregnancy or labour update takes less than 2 seconds under normal use
 
 2. Usability
@@ -184,51 +181,34 @@ Form submission and dashboard pages work consistently across devices
 
 5. Reliability
 Acceptance Criteria:
-
 Saved records remain in the database after refresh or new login
-
 Invalid system actions return clear messages instead of crashing the page
-
 Labour and pregnancy history can be retrieved correctly when requested5. Application Specifications
+
 a. Architecture
 The project follows a three-tier architecture:
-
-Presentation Layer: HTML, CSS, JavaScript pages used by mothers, family members, doctors, nurses, and admin
-
-Business Logic Layer: PHP handles login, pregnancy tracking, labour monitoring, validation, and role-based access
-
-Data Layer: MySQL stores users, pregnancy records, labour monitoring updates, and related data
+1.Presentation Layer: CSS, JavaScript pages used by mothers, family members, doctors, nurses, and admin
+2.Business Logic Layer: PHP handles login, pregnancy tracking, labour monitoring, validation, and role-based access
+3.Data Layer: MySQL stores users, pregnancy records, labour monitoring updates, and related data
 
 b. Database Model
 Main Tables
 Users
-
 Pregnant_Women
-
 Pregnancy_Tracking
-
 Labour_Tracking
 
 Admin
-
 Relationships
 One User can have one Pregnant_Woman profile
-
 One Pregnant_Woman can have many Pregnancy_Tracking records
-
 One Pregnant_Woman can have many Labour_Tracking updates
-
 Admin manages records across the system
 
 c. Technologies Used
-HTML – structure of pages
-
 CSS – styling and responsive design
-
 JavaScript – interaction and dynamic page behavior
-
 PHP – backend logic and implementation
-
 MySQL – database implementation and storage
 
 d. User Interface Design Summary
@@ -254,19 +234,12 @@ e. Security Measures
 Based on our current project structure, the system includes these security measures:
 
 Authentication with email and password during login
-
 Password hashing/encryption before database storage
-
 Session management to keep users logged in securely
-
 Role-based access control for admin, mother, doctor, and nurse views
-
 Input validation before saving data
-
 Prepared statements to reduce SQL Injection risk
-
 XSS protection using safe output methods such as htmlspecialchars()
-
 Secure logout to destroy session data
 
 
